@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: #D1FCD3;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.gridContainer {
+    display: grid;
+    margin: 5vw 20vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'title title'
+        'dishes groceryList ';
+    justify-items: center;
+}
+
+h1 {
+    grid-area: title;
+    margin-bottom: 4vw;
+    font-size: 2.5rem; 
+}
+
+h2 {
+    margin-bottom: 1vw;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+section {
+    background-color: white;
+    padding: 2vw;
+    border: 1px black solid;
+    width: 25vw;
+}
+
+li {
+    width: fit-content;
+}
+
+button {
+    background-color: #65aa67;
+    border: none;
+    color: white;
+    padding: 1vw 1.5vw;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1rem;
+    border: solid 5px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+button:hover {
+    background-color: #1a4e1c;
+}
+
+.retter {
+    grid-area: dishes;
+}
+
+.groceries {
+    grid-area: groceryList;
+    display: flex;
+    flex-direction: column;
+}
+
+.groceries ul {
+    margin: 0.5vw 1.5vw; 
+}
+
+.groceries ul li {
+    line-height: 2;
+}
+
+.dishes ul li {
+    font-size: 1.5rem;
+    padding: 1vw;
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+.dishes ul li:hover {
+    cursor: pointer;
+    text-decoration: 2px underline;
+}
+
+#hidden {
+    display: none;
+}
+
+#show {
+    display: inline;
+}
